@@ -1,6 +1,9 @@
 import { redirect } from 'next/navigation';
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
+import TimeZoneClock from '@/components/ui/TimeZoneClock';
+import Image from 'next/image';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 
 export default async function Dashboard() {
   const supabase = createServerComponentClient({ cookies });
