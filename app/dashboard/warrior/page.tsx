@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import ThemeToggle from '@/components/ui/ThemeToggle';
+import TimeZoneClock from '@/components/ui/TimeZoneClock';
 
 export default function WarriorDashboard() {
   const [user, setUser] = useState<any>(null);

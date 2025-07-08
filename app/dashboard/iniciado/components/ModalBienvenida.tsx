@@ -10,7 +10,7 @@ export default function ModalBienvenida({ onClose }: ModalBienvenidaProps) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex justify-center items-center px-4">
       <div className="bg-[rgb(var(--background))] text-[rgb(var(--foreground))] border border-[#ec4d58] p-8 rounded-2xl max-w-xl w-full shadow-2xl space-y-4">
-        <h2 className="text-2xl font-bold text-[#ec4d58]">¡Bienvenido/a a Crypto Force!</h2>
+        <h2 className="text-2xl font-bold text-[#ec4d58]">¡Bienvenido a Crypto Force Academy! Aquí aprenderás a dominar el mundo de las criptomonedas y el trading. Si tienes dudas, haz clic en el botón &quot;Ayuda&quot;.</h2>
         <p className="text-[rgb(var(--foreground))]">
           Felicitaciones por dar el primer paso hacia tu formación en educación financiera y trading de criptomonedas.
           Aquí comienza un viaje de crecimiento personal, técnico y estratégico.

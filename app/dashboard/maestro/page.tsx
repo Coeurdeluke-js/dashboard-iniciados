@@ -1,3 +1,7 @@
+import Image from 'next/image';
+import TimeZoneClock from '@/components/ui/TimeZoneClock';
+import ThemeToggle from '@/components/ui/ThemeToggle';
+
 export default function MaestroDashboard() {
   return (
     <div className="min-h-screen bg-[#121212] text-white p-6 space-y-4">

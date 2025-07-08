@@ -90,7 +90,7 @@ export default function IniciadoDashboard() {
       window.removeEventListener('storage', () => {});
       window.removeEventListener('abrirModalBienvenida', handleAbrirModal);
     };
-  }, []);
+  }, [supabase.auth]);
 
   const checklist = {
     perfil: true,
@@ -221,7 +221,7 @@ export default function IniciadoDashboard() {
                   <div key={key} className="relative group">
                     <p
                       className={`text-sm sm:text-base font-medium ${
-                        checklist[key] ? 'line-through text-[#ec4d58]' : ''
+                        checklist[key as keyof typeof checklist] ? 'line-through text-[#ec4d58]' : ''
                       }`}
                     >
                       {label}

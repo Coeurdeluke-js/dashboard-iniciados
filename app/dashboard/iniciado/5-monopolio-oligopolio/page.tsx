@@ -43,7 +43,7 @@ export default function MonopolioYOligopolio() {
     if (typeof window !== 'undefined') {
       checkAccess();
     }
-  }, []);
+  }, [supabase.auth]);
 
   if (!isAllowed) return null;
 
@@ -100,7 +100,7 @@ export default function MonopolioYOligopolio() {
                 <li>Leyes antimonopolio: objetivos y límites.</li>
                 <li>Regulación estatal de precios.</li>
                 <li>Propiedad pública vs. propiedad privada.</li>
-                <li>Crítica a la intervención excesiva: el riesgo de la “falla política”.</li>
+                <li>Crítica a la intervención excesiva: el riesgo de la &quot;falla política&quot;.</li>
               </ul>
             </details>
 

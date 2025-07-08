@@ -43,7 +43,7 @@ export default function FuerzasDelMercado() {
     if (typeof window !== 'undefined') {
       checkAccess();
     }
-  }, []);
+  }, [supabase.auth]);
 
   if (!isAllowed) return null;
 
@@ -83,9 +83,7 @@ export default function FuerzasDelMercado() {
 
           <div className="mt-12">
             <h2 className="text-3xl font-bold mb-6 text-[#ec4d58]">Las Fuerzas del Mercado</h2>
-            <p className="mb-4 text-lg">
-              Estudiamos las dinámicas de oferta y demanda que definen los precios y cantidades en los mercados, con especial atención al mercado cripto.
-            </p>
+            <p className="mb-4 text-lg">Cuando pocos dominan el juego, las reglas cambian para todos</p>
 
             <details className="mb-4">
               <summary className="font-semibold cursor-pointer">1. Introducción al Mercado</summary>

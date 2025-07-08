@@ -43,7 +43,7 @@ export default function OperacionesCriptomonedas() {
     if (typeof window !== 'undefined') {
       checkAccess();
     }
-  }, []);
+  }, [supabase.auth]);
 
   if (!isAllowed) return null;
 

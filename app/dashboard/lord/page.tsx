@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import ThemeToggle from '@/components/ui/ThemeToggle';
+import TimeZoneClock from '@/components/ui/TimeZoneClock';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 
 export default function LordDashboard() {
