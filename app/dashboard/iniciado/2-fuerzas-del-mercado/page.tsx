@@ -90,7 +90,7 @@ export default function FuerzasDelMercado() {
               <ul className="list-disc pl-6 mt-2 space-y-2">
                 <li>¿Qué es un mercado?</li>
                 <li>¿Qué es la competencia?</li>
-                <li>El concepto de "tomadores de precios"</li>
+                <li>El concepto de &quot;tomadores de precios&quot;</li>
               </ul>
             </details>
 
