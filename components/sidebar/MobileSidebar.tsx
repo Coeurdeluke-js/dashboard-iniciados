@@ -22,7 +22,7 @@ const MobileSidebar = ({ collapsed, onToggle }: MobileSidebarProps) => {
                   className="group flex flex-col items-center justify-center text-[#fafafa] hover:text-[#ec4d58] transition-all duration-300 ease-in-out text-xs whitespace-nowrap py-1 px-0.5 hover:scale-105"
                 >
                   <span className="text-lg mb-0.5 transition-all duration-300 ease-in-out text-[#fafafa] group-hover:text-[#ec4d58] group-hover:scale-110">
-                    {typeof item.icon === 'string' ? item.icon : React.createElement(item.icon)}
+                    {typeof item.icon === 'string' ? item.icon : React.createElement(item.icon as React.ComponentType)}
                   </span>
                   <span className="text-[8px] leading-tight font-medium transition-all duration-300 ease-in-out text-[#fafafa] group-hover:text-[#ec4d58] max-w-[50px] overflow-hidden text-ellipsis">
                     {item.label.split(' ')[0]}
