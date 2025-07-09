@@ -1,23 +1,24 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { SidebarProvider } from '@/components/sidebar/SidebarContext';
+import { SidebarProvider, useSidebar } from '@/components/sidebar/SidebarContext';
 import Sidebar from '@/components/sidebar/Sidebar';
 import MobileSidebar from '@/components/sidebar/MobileSidebar';
 import RoleSelector from '@/components/layout/RoleSelector';
 
-export default function DashboardLayout({ children }: { children: ReactNode }) {
+function DashboardContent({ children }: { children: ReactNode }) {
+  const { isExpanded, toggleSidebar } = useSidebar();
+
   return (
-    <SidebarProvider>
-      <div className="min-h-screen bg-[rgb(var(--background))] text-[rgb(var(--foreground))] flex flex-col">
-        {/* Sidebar Desktop */}
-        <div className="hidden md:block">
-          <Sidebar />
-        </div>
-        {/* Sidebar Mobile */}
-        <div className="md:hidden">
-          <MobileSidebar />
-        </div>
+    <div className="min-h-screen bg-[rgb(var(--background))] text-[rgb(var(--foreground))] flex flex-col">
+      {/* Sidebar Desktop */}
+      <div className="hidden md:block">
+        <Sidebar />
+      </div>
+      {/* Sidebar Mobile */}
+      <div className="md:hidden">
+        <MobileSidebar collapsed={!isExpanded} onToggle={toggleSidebar} />
+      </div>
         {/* Main Content */}
         <div className="flex-1 flex flex-col min-h-screen">
           <header className="bg-white dark:bg-[#121212] shadow-sm border-b border-gray-200 dark:border-gray-700 px-4 py-4 sticky top-0 z-30">
@@ -52,6 +53,13 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           </footer>
         </div>
       </div>
+    );
+}
+
+export default function DashboardLayout({ children }: { children: ReactNode }) {
+  return (
+    <SidebarProvider>
+      <DashboardContent>{children}</DashboardContent>
     </SidebarProvider>
   );
 }

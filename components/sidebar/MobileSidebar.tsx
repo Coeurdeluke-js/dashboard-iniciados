@@ -3,7 +3,12 @@ import Link from "next/link";
 import React from "react";
 import { FiUser, FiLogOut, FiChevronRight } from "react-icons/fi";
 
-const MobileSidebar = ({ collapsed, onToggle }) => {
+interface MobileSidebarProps {
+  collapsed: boolean;
+  onToggle: () => void;
+}
+
+const MobileSidebar = ({ collapsed, onToggle }: MobileSidebarProps) => {
   return (
     <nav className="fixed bottom-0 left-0 w-full bg-[#121212] border-t border-gray-800/50 z-50 md:hidden backdrop-blur-sm">
       <ul className="flex justify-around items-center h-14 px-1">
