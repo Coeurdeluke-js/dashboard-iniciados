@@ -90,7 +90,7 @@ export default function IniciadoDashboard() {
       window.removeEventListener('storage', () => {});
       window.removeEventListener('abrirModalBienvenida', handleAbrirModal);
     };
-  }, [supabase.auth]);
+  }, []);
 
   const checklist = {
     perfil: true,

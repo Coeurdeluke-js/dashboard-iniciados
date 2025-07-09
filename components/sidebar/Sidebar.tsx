@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { sidebarItems, sidebarItemsAcolito } from "./sidebarItems";
 import SidebarToggle from "./SidebarToggle";
 import { useSidebar } from "./SidebarContext";
@@ -25,9 +26,11 @@ export default function Sidebar() {
       {/* Header con logo */}
       <div style={{ height: '140px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} className="flex-shrink-0 relative overflow-hidden border-b border-gray-800/30 bg-[#121212]">
         {isExpanded && (
-          <img 
+          <Image 
             src="/logo-dark-theme.png" 
             alt="Logo" 
+            width={112}
+            height={112}
             className="h-28 w-auto transition-all duration-300"
             style={{ display: 'block', margin: '0 auto' }}
           />

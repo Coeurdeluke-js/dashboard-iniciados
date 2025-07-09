@@ -1,8 +1,39 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import TimeZoneClock from '@/components/ui/TimeZoneClock';
 import ThemeToggle from '@/components/ui/ThemeToggle';
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 
 export default function MaestroDashboard() {
+  const [user, setUser] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const supabase = createClientComponentClient();
+
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        setUser(user);
+      } catch (error) {
+        console.error('Error fetching user:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    getUser();
+  }, [supabase]);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-400"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-[#121212] text-white p-6 space-y-4">
       {/* Header */}
@@ -20,8 +51,8 @@ export default function MaestroDashboard() {
       />
     </div>
     <div>
-      <h1 className="text-2xl font-bold">{user?.email || 'Iniciado'}</h1>
-      <p className="text-gray-600 dark:text-gray-400">Rango: Iniciado</p>
+      <h1 className="text-2xl font-bold">{user?.email || 'Maestro'}</h1>
+      <p className="text-gray-600 dark:text-gray-400">Rango: Maestro</p>
     </div>
   </div>
 
