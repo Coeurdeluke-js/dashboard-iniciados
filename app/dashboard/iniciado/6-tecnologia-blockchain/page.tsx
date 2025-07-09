@@ -43,7 +43,7 @@ export default function OfertaDemandaDinero() {
     if (typeof window !== 'undefined') {
       checkAccess();
     }
-  }, []);
+  }, [supabase]);
 
   if (!isAllowed) return null;
 

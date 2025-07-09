@@ -20,7 +20,7 @@ export default function ModalBienvenida({ onClose }: ModalBienvenidaProps) {
           Una vez completados, dirígete al <strong>Punto de Control</strong> para afianzar tu aprendizaje y continuar con tu progreso.
         </p>
         <p className="text-[rgb(var(--foreground))]">
-          Si deseas profundizar aún más, puedes explorar libremente desde la sección <strong>"Explora la Academia"</strong> en la barra lateral.
+          Si deseas profundizar aún más, puedes explorar libremente desde la sección <strong>&quot;Explora la Academia&quot;</strong> en la barra lateral.
         </p>
         <p className="text-[rgb(var(--foreground))]">
           📓 Te recomendamos tener a mano un cuaderno o herramienta digital para tomar apuntes. Lo que anotes hoy puede marcar la diferencia en tus decisiones de mañana.

@@ -43,7 +43,7 @@ export default function MonopolioYOligopolio() {
     if (typeof window !== 'undefined') {
       checkAccess();
     }
-  }, []);
+  }, [supabase]);
 
   if (!isAllowed) return null;
 
@@ -83,7 +83,7 @@ export default function MonopolioYOligopolio() {
 
           <div className="mt-12">
             <h2 className="text-3xl font-bold mb-6 text-[#ec4d58]">ÍNDICE MÓDULO 5: MONOPOLIO Y OLIGOPOLIO</h2>
-            <p className="mb-4 text-lg">"Cuando pocos dominan el juego, las reglas cambian para todos"</p>
+            <p className="mb-4 text-lg">&quot;Cuando pocos dominan el juego, las reglas cambian para todos&quot;</p>
 
             <details className="mb-4">
               <summary className="font-semibold cursor-pointer">1. ¿Qué es un Monopolio?</summary>
